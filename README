@@ -11,6 +11,7 @@ https://launchpad.net/gearmand
 
 Once the Gearman package is installed, you can install the UDFs with:
 
+sudo apt install libgearman-dev
 make
 make install
 
