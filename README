@@ -13,11 +13,11 @@ Once the Gearman package is installed, you can install the UDFs with:
 
 sudo apt install libgearman-dev
 make
-make install
+sudo make install
 
 To load the UDFs for a database, run:
 
-shell$ psql <database>
+shell$ sudo -u postgres -s psql <database>
 [database]=# \i /usr/local/postgresql/share/contrib/pggearman.sql
 
 You should then have the following functions available:
@@ -54,4 +54,4 @@ This module supports GUC (Grand Unified Configuration) variables.
 
 Example of what we support in the Postgres configuration file: 
 custom_variable_classes = 'pggearman' (для версий ниже 9.6)
-pggearman.default_servers = 'localhost'
+pggearman.default_servers = '127.0.0.1:4730'
